@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Portfolio,html,CSS,Javascript,web development project,mern stack project">
+    <meta name="Description" content="Ibrahim khalilulla is a software engineer">
+    <meta name="author" content="Ibrahim khalilulla">
+    <title>Portfolio</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <style>
+    body{
+       background-color: aquamarine;
+       font-family: "Roboto", sans-serif;
+    }
+   </style>
 </head>
 <body>
     <!-- For Comment  -->
-    <nav>
+    <nav>  
         <ul>
        <li> <a href="#About">About Me</a></li>
        <li> <a href="#Skills">Skills</a></li>
@@ -25,12 +39,22 @@
         <p><strong>Education</strong> : Undergrade in Information and Communication Engineering.</p>
         <p><strong>Experience </strong>: Full Stack Developer.</p>
         <a target = "blank" href="https://www.facebook.com/xender.paul.9/">
-        <img src="./images/img2.jpg" alt="Ibrahim khalilulla"height =" 200" width="220">
+        <img src="./images/img2.jpg" alt="Ibrahim khalilulla"height =" 200" width="220"> <br>
+        
     </a>
+    <div>
+    
+        <video height="300" controls>
+            <source src="Videos/video.mp4" type="video/mp4">
+            Not supported.
+        </video>
+    </div>
+    
     </section>
     <section id="Skills">
         <h3>Skills :</h3>
-        <ol> <!-- For change the order type : <ol type = "A/a"> 
+        <div>
+         <!-- For change the order type : <ol type = "A/a"> 
                    For Start from a value : <ol start = "5"> -->
               <table border="1" cellpadding="5" cellspacing="0">
                 <thead>
@@ -39,7 +63,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>DSA</td>
+                        <td >DSA</td>
                         <td>Intermediate</td>
                     </tr>
                     <tr>
@@ -49,8 +73,7 @@
                 </tbody>
                 <tbody>
                     <tr>
-                        <td>CSS</td>
-
+                        <td> CSS</td>
                         <td>Expert</td>
                     </tr>
                 </tbody>
@@ -68,8 +91,25 @@
                     <dd>HTML is a Markup Language</dd>
                    </dl>
                    </ol>
-    </section>
-    <section id="Projects">
+                </div>
+                <h3>Skills Level</h3>
+                <div>
+                   <label for="htmlProgress">HTML </label>
+                   <progress id="htmlProgress" name="htmlProgress" value="90" max="100">90%</progress>
+                   <br>
+                   <label for="JsProgress">Javascript</label>
+                   <progress id="JsProgress" name="JsProgress" value="80" max="100">80%</progress>
+                   <br>
+                   <label for="CssProgress">CSS </label>
+                   <progress id="CssProgress" name="CssProgress" value="85" max="100">85%</progress>
+                </div>
+                <div>
+                    <h3>Experience Level </h3>
+                    <label for="Experience">Experience : </label>
+                    <meter id="Experience" name="Experience"  value="1" min="0" max="5"> 1 Year</meter>
+                </div>
+            </section>
+                   <section id="Projects">
         <h4>Projects :</h4>
         <ul type = "Square">
             <li>Porfolio Website.</li>
@@ -81,13 +121,16 @@
         <a target="Blank" href="https://www.youtube.com/watch?v=VlPiVmYuoqw">Javascript Playlist</a>
     </section>
     <section id="Contact">
-        <h5><strong>Contact</strong> </h5>
-        <a href="01851904997">Call </a> <br>
-        <a href="ibrahimkhalilulla898@gmail.com">Email</a>
+        <h5><strong>Contact : </strong> </h5>
+        <a href="01851904997"><i class="fa-solid fa-phone"></i>Call </a> <br>
+        <a href="ibrahimkhalilulla898@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>    <br>
+        <a href="https://www.facebook.com/xender.paul.9/" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a> <br>
+        <a href=""><i class="fa-brands fa-linkedin"></i> linkedin</a>
 
     </section>
     <section>
-        <form action="">
+        <form action="https://formspree.io/f/mnnadbol"
+        method="POST">
             <div>
                 <label for="FirstName">First Name : <br/> </label><input type="text" id="FirstName" name="FirstName" required><br/>
             </div>
@@ -95,11 +138,34 @@
             <label for="SureName">Sure Name : <br></label> <input type="text" id="SureName" name="SureName" required> <br/>
            </div>
            <div>
+            <label for="age">Age : <br></label>
+            <input type="number" id="age" name="age" min="18" max="50" required>
+           </div>
+           <div>
             <label for="email">Email : </label> <br/> <input type="email" id="email" name="email" required><br>
             
         </div>
+        <div>
+            <label for="password">password : <br> </label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div>
+            <label for="website">website : <br> </label>
+            <input type="url" id="website" pattern="https?://.+">
+          </div>
           <div>
             <label for="message">Message : <br></label> <textarea name="message" id="message" rows="10" cols="10"></textarea>
+          </div>
+          <div>
+            <label for="subject">subject</label>
+            <select name="subject" id="subject">
+                <option value="inquary">inquary</option>
+                <option value="feedback">feedback</option>
+            </select>
+          </div>
+          <div>
+            <label for="image">Upload an image </label>
+            <input type="file" accept=".jpg,.png">
           </div>
           <div>
             <button type="submit">submit</button><br>
@@ -110,6 +176,7 @@
         </form>
     </section>
     <footer>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.783905165682!2d88.85483617985525!3d24.038684322973516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39feac06aa6fc0a5%3A0xe72ba4d5266e9845!2sTaragunia%20Bazar!5e0!3m2!1sbn!2sbd!4v1722599132840!5m2!1sbn!2sbd" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Home Address"></iframe>
         <p>Copyright Reserved By &copy; Ibrahim Khalilulla </p>
     </footer>
     <!--Normal text. <br>
